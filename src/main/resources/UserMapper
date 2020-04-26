@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+
+
+    <!--查询所有-->
+    <select id="selectList" parameterType="com.study.pojo.User" resultType="com.study.pojo.User">
+        select * from userInfo
+    </select>
+
+    <!--新增一条记录-->
+    <insert id="save" parameterType="com.study.pojo.User">
+        insert into userInfo values(#{userId},#{userName})
+    </insert>
+
+    <!--更新操作-->
+    <update id="update" parameterType="com.study.pojo.User">
+        update userInfo set userName = #{userName} where userId = #{userId}
+    </update>
+
+    <!--删除操作-->
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from userInfo where userId = #{abc}
+    </delete>
+</mapper>

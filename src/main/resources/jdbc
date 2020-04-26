@@ -1,0 +1,4 @@
+jdbc.driver=com.mysql.cj.jdbc.Driver
+jdbc.url=jdbc:mysql:///LAGOU_STUDY
+jdbc.username=root
+jdbc.password=root@123
